@@ -10,8 +10,9 @@ while True:
 		break
 	else:
 		time = time - 1
-		print('密碼錯誤, ''您還剩', time, '次機會')
+		if time > 0:
+			print('密碼錯誤, ''您還剩', time, '次機會')
 
-		if time <= 0:
-			print('輸入次數已達上限')
+		else:
+			print('密碼錯誤, 輸入次數已達上限')
 			break
